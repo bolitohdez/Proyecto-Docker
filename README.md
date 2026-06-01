@@ -18,7 +18,19 @@ cd Proyecto_Docker
 
 ### 2. Configurar variables de entorno
 
-Crea un archivo `.env` en la raíz del proyecto (ver ejemplo abajo).
+Crea un archivo .env basado en el ejemplo proporcionado.
+
+PORT=3000
+
+DB_HOST=db
+DB_USER=root
+DB_PASSWORD=root
+DB_NAME=testdb
+DB_PORT=3306
+
+# ENTORNO
+
+NODE_ENV=development
 
 ---
 
@@ -85,15 +97,6 @@ El proyecto utiliza Docker Compose para levantar:
 
 * Contenedor backend (Node.js)
 * Contenedor base de datos (MySQL)
-
----
-
-## 🚀 Posibles mejoras
-
-* Implementar autenticación (JWT)
-* Migrar frontend a React
-* Agregar validaciones
-* Subir a la nube (AWS, Railway, etc.)
 
 ---
 
