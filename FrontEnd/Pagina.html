@@ -1,0 +1,33 @@
+<Doctype html!>
+<html lang="es">
+<head>    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Erome</title>
+    <link rel="stylesheet" href="Styles.css">
+</head>
+<body>
+    <div class="card">
+        <h2 id="titulo">Miles Morales</h2>
+        <img src="img.png" class="image" alt="Imagen de perfil">
+        <p id="descripcion">ME CONFORMO</p>
+        <h3>Skills</h3>
+        <ul>
+            <li>Python</li>
+            
+            <li>JavaScript</li>
+            <li>C++</li>
+        </ul>
+        <h3>Usuarios</h3>
+        <ul id="listaUsuarios"></ul>
+        <div class="button">
+            <button class="button" onclick="cambiarModo()">Modo oscuro</button>
+            <button class="button" onclick="darLike()">Me gusta</button>
+            <button class="button" onclick="agregarUsuario()">Agregar usuario</button>
+        </div>
+        <h2>Likes: <span id="like">0</span></h2>
+    </div>
+    <script src="script.js"></script>
+    
+
+</body>
+</html>
