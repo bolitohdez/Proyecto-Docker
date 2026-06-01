@@ -19,7 +19,7 @@ cd Proyecto_Docker
 ### 2. Configurar variables de entorno
 
 Crea un archivo .env basado en el ejemplo proporcionado.
-
+```
 PORT=3000
 
 DB_HOST=db
@@ -27,7 +27,7 @@ DB_USER=root
 DB_PASSWORD=root
 DB_NAME=testdb
 DB_PORT=3306
-
+```
 # ENTORNO
 
 NODE_ENV=development
@@ -42,35 +42,14 @@ docker-compose up --build
 
 ---
 
-## 🌐 Acceso
+## Acceso
 
 * Backend: http://localhost:3000
-* Endpoint usuarios: http://localhost:3000/usuarios
-* Frontend: abre el archivo `index.html` en tu navegador
+* Base de datos: http://localhost:3000/usuarios
+* Frontend: abre el archivo `Pagina.html` en tu navegador
 
----
 
-## 📦 Endpoints disponibles
-
-### GET /usuarios
-
-Obtiene todos los usuarios.
-
-### POST /usuarios
-
-Crea un nuevo usuario.
-
-Ejemplo:
-
-```json
-{
-  "nombre": "Danel"
-}
-```
-
----
-
-## 🧪 Base de datos
+## Base de datos
 
 Si la tabla no existe, puedes crearla manualmente:
 
@@ -91,7 +70,7 @@ CREATE TABLE usuarios (
 
 ---
 
-## 🐳 Docker
+## Docker
 
 El proyecto utiliza Docker Compose para levantar:
 
@@ -100,6 +79,6 @@ El proyecto utiliza Docker Compose para levantar:
 
 ---
 
-## 👨‍💻 Autor
+## Autor
 
-Proyecto desarrollado con fines educativos.
+Danel Adair Hernandez Dzib.
