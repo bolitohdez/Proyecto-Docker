@@ -16,25 +16,7 @@ cd Proyecto_Docker
 
 ---
 
-### 2. Configurar variables de entorno
-
-Crea un archivo .env basado en el ejemplo proporcionado.
-```
-PORT=3000
-
-DB_HOST=db
-DB_USER=root
-DB_PASSWORD=root
-DB_NAME=testdb
-DB_PORT=3306
-```
-# ENTORNO
-
-NODE_ENV=development
-
----
-
-### 3. Levantar el proyecto
+### 2. Levantar el proyecto
 
 ```
 docker-compose up --build
@@ -51,7 +33,7 @@ docker-compose up --build
 
 ## Base de datos
 
-Si la tabla no existe, puedes crearla manualmente:
+Si la tabla no existe, se puede crear manualmente:
 
 ```
 docker exec -it <nombre_contenedor_db> mysql -uroot -p
