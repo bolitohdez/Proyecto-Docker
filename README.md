@@ -14,8 +14,6 @@ git clone <tu-repositorio>
 cd Proyecto_Docker
 ```
 
----
-
 ### 2. Levantar el proyecto
 
 ```
