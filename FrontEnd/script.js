@@ -3,6 +3,8 @@ const API = "http://localhost:3000/usuarios";
 async function agregarUsuario() {
   const nombre = prompt("Nombre del usuario:");
 
+  if (!nombre) return;
+
   await fetch(API, {
     method: "POST",
     headers: {
