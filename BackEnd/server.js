@@ -10,19 +10,32 @@ app.use(express.json());
 
 // Obtener datos
 app.get('/usuarios', (req, res) => {
-  db.query('SELECT * FROM tesdb', (err, results) => {
+  db.query('SELECT * FROM usuarios', (err, results) => {
     if (err) return res.status(500).send(err);
     res.json(results);
   });
 });
 
-// Insertar datos
+// Insertar usuario
 app.post('/usuarios', (req, res) => {
   const { nombre } = req.body;
-  db.query('INSERT INTO usuarios (nombre) VALUES (?)', [nombre], (err) => {
-    if (err) return res.status(500).send(err);
-    res.send('Usuario agregado');
-  });
+
+  if (!nombre) {
+    return res.status(400).send('El nombre es obligatorio');
+  }
+
+  db.query(
+    'INSERT INTO usuarios (nombre) VALUES (?)',
+    [nombre],
+    (err, result) => {
+      if (err) return res.status(500).send(err);
+
+      res.json({
+        message: 'Usuario agregado',
+        id: result.insertId
+      });
+    }
+  );
 });
 
 app.listen(3000, () => {
